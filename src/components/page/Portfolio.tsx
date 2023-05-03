@@ -39,7 +39,6 @@ export const Portfolio: React.FC = () => {
               <Label variant='body1'>Demo:</Label>
               <Link
                 href={project.demoLink}
-                target='_blank'
                 rel='noopener noreferrer'
                 color='text.secondary'
               >
@@ -50,7 +49,6 @@ export const Portfolio: React.FC = () => {
               <Label variant='body1'>Project:</Label>
               <Link
                 href={project.githubLink}
-                target='_blank'
                 rel='noopener noreferrer'
                 color='text.secondary'
               >

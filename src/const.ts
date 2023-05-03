@@ -3,6 +3,7 @@ export const GITHUB = 'https://github.com/mardesnic';
 export const TWITTER = 'https://twitter.com/daisho13th';
 export const NAME = 'Marin Desnica';
 export const APP_NAME = `<Des />`;
+export const WEBSITE = 'https://mardesnic.github.io/';
 
 export const PROJECTS = [
   {
