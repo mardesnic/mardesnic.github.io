@@ -20,4 +20,11 @@ export const PROJECTS = [
     demoLink: 'https://mardesnic.github.io/des-flappy/',
     githubLink: 'https://github.com/mardesnic/des-flappy',
   },
+  {
+    title: '<CatanMapBuilder />',
+    summary:
+      'Simple web app for generating Catan maps built with React and MUI Material.',
+    demoLink: 'https://mardesnic.github.io/des-catan-map-builder/',
+    githubLink: 'https://github.com/mardesnic/des-catan-map-builder',
+  },
 ];
