@@ -16,6 +16,13 @@ export const WEBSITES = [
 
 export const PROJECTS = [
   {
+    title: '<Space />',
+    summary:
+      '3D representation of the Solar System system built using React and Three.js. ',
+    url: 'https://mardesnic.github.io/des-space/',
+    github: 'https://github.com/mardesnic/des-space',
+  },
+  {
     title: '<Trivia />',
     summary:
       'Trivia is a fun and engaging trivia app built with React and MUI Material. ',
@@ -23,17 +30,17 @@ export const PROJECTS = [
     github: 'https://github.com/mardesnic/des-trivia',
   },
   {
-    title: '<Flappy />',
-    summary:
-      'Flappy is a clone of the popular game Flappy Bird created with React.',
-    url: 'https://mardesnic.github.io/des-flappy/',
-    github: 'https://github.com/mardesnic/des-flappy',
-  },
-  {
     title: '<CatanMapBuilder />',
     summary:
       'Simple web app for generating Catan maps built with React and MUI Material.',
     url: 'https://mardesnic.github.io/des-catan-map-builder/',
     github: 'https://github.com/mardesnic/des-catan-map-builder',
+  },
+  {
+    title: '<Flappy />',
+    summary:
+      'Flappy is a clone of the popular game Flappy Bird created with React.',
+    url: 'https://mardesnic.github.io/des-flappy/',
+    github: 'https://github.com/mardesnic/des-flappy',
   },
 ];
