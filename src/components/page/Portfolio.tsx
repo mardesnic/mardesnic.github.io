@@ -78,7 +78,7 @@ export const Portfolio: React.FC = () => {
               </Link>
             </Box>
             <Box>
-              <Label variant='body1'>Source code:</Label>
+              <Label variant='body1'>Code:</Label>
               <Link
                 href={project.github}
                 rel='noopener noreferrer'
