@@ -16,6 +16,13 @@ export const WEBSITES = [
 
 export const PROJECTS = [
   {
+    title: '<Balloons />',
+    summary:
+      'A fun, interactive balloon popping game for toddlers, built with React, TypeScript, and Phaser. ',
+    url: 'https://mardesnic.github.io/des-balloons/',
+    github: 'https://github.com/mardesnic/des-balloons',
+  },
+  {
     title: '<Space />',
     summary:
       '3D representation of the Solar System system built using React and Three.js. ',
