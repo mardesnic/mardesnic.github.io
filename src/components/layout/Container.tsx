@@ -1,11 +1,6 @@
 import { ReactNode } from 'react';
 import { styled } from '@mui/system';
-import {
-  Container as MuiContainer,
-  Box,
-  Paper as MuiPaper,
-} from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { Container as MuiContainer, Box } from '@mui/material';
 import { Navbar } from './Navbar';
 
 interface Props {
@@ -21,7 +16,7 @@ const Content = styled(Box)(({ theme }) => ({
   },
 }));
 
-const Paper = styled(MuiPaper)(({ theme }) => ({
+const Paper = styled(Box)(({ theme }) => ({
   paddingInline: theme.spacing(2),
   paddingBlock: theme.spacing(3),
   color: theme.palette.text.primary,
@@ -32,13 +27,12 @@ const Paper = styled(MuiPaper)(({ theme }) => ({
 }));
 
 export const Container: React.FC<Props> = ({ children }) => {
-  const theme = useTheme();
   return (
     <>
       <Navbar />
-      <MuiContainer maxWidth='md'>
+      <MuiContainer maxWidth='lg'>
         <Content>
-          <Paper theme={theme}>{children}</Paper>
+          <Paper>{children}</Paper>
         </Content>
       </MuiContainer>
     </>

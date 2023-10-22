@@ -1,96 +1,92 @@
 import React from 'react';
 import { Container } from '../layout/Container';
-import { styled } from '@mui/system';
-import { Box, Typography, Link, Divider as MuiDivider } from '@mui/material';
-import { PROJECTS, WEBSITES } from '../../const';
+import { Stack, styled } from '@mui/system';
+import {
+  Box,
+  Typography,
+  Grid,
+  Paper,
+  IconButton,
+  Link,
+  Chip,
+} from '@mui/material';
+import { PROJECTS } from '../../const';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LaunchIcon from '@mui/icons-material/Launch';
 
-const List = styled(Box)(({ theme }) => ({
+const Item = styled(Paper)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
-  gap: theme.spacing(3),
-  marginTop: theme.spacing(3),
-}));
-
-const Item = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  flexDirection: 'column',
+  justifyContent: 'space-between',
   gap: theme.spacing(1),
-}));
-
-const Label = styled(Typography)(({ theme }) => ({
-  display: 'inline',
-  marginRight: theme.spacing(1),
-}));
-
-const Divider = styled(MuiDivider)(({ theme }) => ({
-  marginTop: theme.spacing(3),
+  padding: theme.spacing(2),
+  minHeight: 215,
 }));
 
 export const Portfolio: React.FC = () => {
   return (
     <Container>
-      <Typography variant='h5'>Welcome to My Coding Playground!</Typography>
-      <List>
-        {WEBSITES.map((website) => (
-          <Item key={website.url}>
-            <Typography variant='h6'>{website.title}</Typography>
-            <Typography variant='subtitle1'>{website.summary}</Typography>
-            <Box>
-              <Label variant='body1'>Link:</Label>
-              <Link
-                href={website.url}
-                target='_blank'
-                rel='noopener noreferrer'
-                color='text.secondary'
-              >
-                {website.url}
-              </Link>
-            </Box>
-            {website.github && (
-              <Box>
-                <Label variant='body1'>Project:</Label>
-                <Link
-                  href={website.github}
-                  rel='noopener noreferrer'
-                  color='text.secondary'
+      <Grid container spacing={2}>
+        {PROJECTS.map((project) => (
+          <Grid item key={project.url} sm={12} md={6} lg={4}>
+            <Item>
+              <div>
+                <Stack
+                  direction='row'
+                  gap={1}
+                  justifyContent='space-between'
+                  alignItems='center'
+                  sx={{ width: '100%' }}
                 >
-                  {website.github}
-                </Link>
-              </Box>
-            )}
-            <Divider light />
-          </Item>
+                  <Typography variant='h6'>
+                    <Link
+                      href={project.url}
+                      color={'secondary'}
+                      sx={{ textDecoration: 'none' }}
+                    >
+                      {project.title}
+                    </Link>
+                  </Typography>
+                  <Stack direction='row' gap={1}>
+                    {project.github && (
+                      <Box>
+                        <IconButton
+                          href={project.github}
+                          target='_blank'
+                          rel='noopener noreferrer'
+                          size='small'
+                        >
+                          <GitHubIcon />
+                        </IconButton>
+                      </Box>
+                    )}
+                    {project.url && (
+                      <Box>
+                        <IconButton
+                          href={project.url}
+                          target='_blank'
+                          rel='noopener noreferrer'
+                          size='small'
+                        >
+                          <LaunchIcon />
+                        </IconButton>
+                      </Box>
+                    )}
+                  </Stack>
+                </Stack>
+                <Typography sx={{ mt: 2 }} variant='subtitle1'>
+                  {project.summary}
+                </Typography>
+              </div>
+              <Stack direction='row' gap={1} flexWrap='wrap'>
+                {project.technologies.map((item) => (
+                  <Chip label={item} variant='outlined' size='small' />
+                ))}
+              </Stack>
+            </Item>
+          </Grid>
         ))}
-      </List>
-      <List>
-        {PROJECTS.map((project, i) => (
-          <Item key={project.url}>
-            <Typography variant='h6'>{project.title}</Typography>
-            <Typography variant='subtitle1'>{project.summary}</Typography>
-            <Box>
-              <Label variant='body1'>Demo:</Label>
-              <Link
-                href={project.url}
-                rel='noopener noreferrer'
-                color='text.secondary'
-              >
-                {project.url}
-              </Link>
-            </Box>
-            <Box>
-              <Label variant='body1'>Code:</Label>
-              <Link
-                href={project.github}
-                rel='noopener noreferrer'
-                color='text.secondary'
-              >
-                {project.github}
-              </Link>
-            </Box>
-            {i + 1 < PROJECTS.length && <Divider light />}
-          </Item>
-        ))}
-      </List>
+      </Grid>
     </Container>
   );
 };

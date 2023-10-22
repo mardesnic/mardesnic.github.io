@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 
 const primary = '#333';
-const secondary = '#fff';
+const secondary = '#ccc';
 
 export const theme = createTheme({
   palette: {
@@ -21,6 +21,7 @@ export const theme = createTheme({
     },
     subtitle1: {
       fontSize: 16,
+      opacity: 0.6,
     },
     h1: {
       fontSize: 22,
