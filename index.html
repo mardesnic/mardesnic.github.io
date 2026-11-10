@@ -1,14 +1,109 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Des</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Marin Desnica</title>
+    <meta name="description" content="Marin Desnica" />
+    <link rel="icon" href="favicon.ico" />
+    <style>
+      :root {
+        --bg: #f4f4f2;
+        --card: #fff;
+        --text: #1a1a1a;
+        --muted: #666;
+        --line: #e2e2e0;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #121212;
+          --card: #1c1c1c;
+          --text: #eee;
+          --muted: #999;
+          --line: #2e2e2e;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
+      body {
+        min-height: 100dvh;
+        display: grid;
+        place-items: center;
+        padding: 16px;
+        background: var(--bg);
+        color: var(--text);
+        font: 16px/1.5 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      }
+      main {
+        width: 100%;
+        max-width: 340px;
+        padding: 32px 24px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        text-align: center;
+      }
+      img {
+        width: 112px;
+        height: 112px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      h1 {
+        margin: 16px 0 24px;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 48px;
+        padding: 0 16px;
+        border-top: 1px solid var(--line);
+        color: var(--text);
+        text-decoration: none;
+        overflow-wrap: anywhere;
+      }
+      a:hover {
+        color: var(--muted);
+      }
+      svg {
+        width: 20px;
+        height: 20px;
+        flex: none;
+        fill: currentColor;
+      }
+    </style>
   </head>
-
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <main>
+      <img src="avatar.jpeg" alt="" />
+      <h1>Marin Desnica</h1>
+      <a href="mailto:marin.desnica@gmail.com">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"
+          />
+        </svg>
+        marin.desnica@gmail.com
+      </a>
+      <a href="https://github.com/mardesnic">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"
+          />
+        </svg>
+        github.com/mardesnic
+      </a>
+    </main>
   </body>
 </html>

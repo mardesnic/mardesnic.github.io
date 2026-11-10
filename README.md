@@ -1,7 +1,5 @@
-# Des portfolio
+# mardesnic.github.io
 
-mardesnic.github.io is a simple portfolio built with React and MUI Material.
+A one-page contact card: name, email and GitHub. Plain HTML, no build.
 
-## Demo
-
-Check out the live demo at: https://mardesnic.github.io/
+Live at https://mardesnic.github.io/
